@@ -9,6 +9,7 @@ ezvis:
    - https_proxy
   volumes:
     - ./data/repository:/data/ezvis
+  restart: always
 
 ezvisdb:
   image: mongo:3.2.0

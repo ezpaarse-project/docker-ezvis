@@ -1,0 +1,17 @@
+ezvis:
+  image: ezvis
+  links:
+   - ezvisdb:mongo
+  ports:
+   - "3000:3000"
+  environment:
+   - http_proxy
+   - https_proxy
+  volumes:
+    - ./data/repository:/data/ezvis
+
+ezvisdb:
+  image: mongo:3.2.0
+  volumes:
+    - ./data/db:/data/db
+  command: --smallfiles
